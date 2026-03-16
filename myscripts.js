@@ -197,8 +197,8 @@ function addStructuredData() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Head-Start Web Development",
-        "url": "https://headstartwebdevelopment.co.uk",
-        "logo": "https://headstartwebdevelopment.co.uk/Logo/Logo.png",
+        "url": "https://www.head-startwebdevelopment.co.uk",
+        "logo": "https://www.head-startwebdevelopment.co.uk/Logo/Logo.png",
         "description": "Affordable web design and development services for small businesses",
         "telephone": "07754858861",
         "email": "headstartwebdevelopment@gmail.com",
@@ -209,8 +209,8 @@ function addStructuredData() {
         "sameAs": [
             "https://www.instagram.com/headstart_webdevelopment"
         ],
-        "areaServed": "UK",
-        "priceRange": "£250-£1000"
+        "areaServed": ["Banbury", "Bicester", "Brackley", "Chipping Norton", "Oxfordshire", "United Kingdom"],
+        "priceRange": "£250-£1000+"
     });
     document.head.appendChild(script);
 }
