@@ -64,46 +64,186 @@
     <div class="my-5"> 
         <div class="p-5 text-center bg-body-tertiary"> 
             <div class="container py-5"> 
-                                <h1 class="display-4 text-dark fw-bold">Let's Build Your Website</h1> 
-                <p class="col-lg-8 mx-auto lead">Tell me about your business, and I'll send you a personalized quote within 24 hours. No obligation, no tech jargon — just honest advice.</p>
-                <div class="row justify-content-center mt-3 mb-4">
-                    <div class="col-auto"><span class="text-success fw-bold">✓</span> Free consultation</div>
-                    <div class="col-auto"><span class="text-success fw-bold">✓</span> Response within 24 hours</div>
-                    <div class="col-auto"><span class="text-success fw-bold">✓</span> No obligation</div>
-                </div>            
+                <h1 class="display-4 text-dark fw-bold">Ready to Grow Your Business Online?</h1> 
+                <p class="col-lg-8 mx-auto lead">Get a personalized quote in 24 hours. No pressure, no obligation — just a friendly chat about what you need.</p>
+                <div class="row justify-content-center mt-4 mb-3">
+                    <div class="col-auto trust-badge"><span class="text-success fw-bold">✓</span> Free consultation</div>
+                    <div class="col-auto trust-badge"><span class="text-success fw-bold">✓</span> 24-hour response</div>
+                    <div class="col-auto trust-badge"><span class="text-success fw-bold">✓</span> No obligation</div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-8">
+                        <div class="quick-contact-options">
+                            <p class="mb-2 text-muted"><strong>Prefer to call or email?</strong></p>
+                            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                                <a href="tel:07754858861" class="quick-contact-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                    </svg>
+                                    07754 858861
+                                </a>
+                                <a href="mailto:headstartwebdevelopment@gmail.com" class="quick-contact-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                                    </svg>
+                                    Email me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> 
         </div> 
     </div>
-    <form class="contact-form"
-  action="https://formspree.io/f/xyzjoodb"
-  target="_top"
-  method="POST"
->
-  <div class="fs-field">
-    <label class="fs-label" for="name">Your Name</label>
-    <input class="fs-input" id="name" name="name" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
-    <p class="fs-description">
-        This will help me respond to your query via an email.
-    </p>
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
-    <textarea
-      class="fs-textarea"
-      id="message"
-      name="message"
-      required
-    ></textarea>
-    <p class="fs-description">What would you like to discuss?</p>
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
-</form>
+
+    <!-- Contact Form Section -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form-wrapper">
+                    <h2 class="text-center mb-4">Get Your Free Quote</h2>
+                    <p class="text-center text-muted mb-5">Fill in the form below and I'll get back to you with a personalized quote within 24 hours.</p>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/xyzjoodb" target="_top" method="POST">
+                        
+                        <!-- Personal Details -->
+                        <div class="fs-field">
+                            <label class="fs-label" for="name">Your Name *</label>
+                            <input class="fs-input" type="text" id="name" name="name" placeholder="John Smith" required />
+                        </div>
+
+                        <div class="fs-field">
+                            <label class="fs-label" for="email">Email Address *</label>
+                            <input class="fs-input" type="email" id="email" name="email" placeholder="john@example.com" required />
+                            <p class="fs-description">I'll send your quote here</p>
+                        </div>
+
+                        <div class="fs-field">
+                            <label class="fs-label" for="phone">Phone Number</label>
+                            <input class="fs-input" type="tel" id="phone" name="phone" placeholder="07700 900000" />
+                            <p class="fs-description">Optional - in case I have questions</p>
+                        </div>
+
+                        <!-- Business Details -->
+                        <div class="fs-field">
+                            <label class="fs-label" for="business">Business Name</label>
+                            <input class="fs-input" type="text" id="business" name="business" placeholder="Your business name" />
+                        </div>
+
+                        <div class="fs-field">
+                            <label class="fs-label" for="businessType">Type of Business *</label>
+                            <select class="fs-select" id="businessType" name="businessType" required>
+                                <option value="">Select your industry...</option>
+                                <option value="Beauty & Spa">Beauty & Spa</option>
+                                <option value="Trades (Plumber, Electrician, Builder)">Trades (Plumber, Electrician, Builder)</option>
+                                <option value="Pet Services">Pet Services (Grooming, Walking, Sitting)</option>
+                                <option value="Fitness & Wellness">Fitness & Wellness</option>
+                                <option value="Restaurant & Cafe">Restaurant & Cafe</option>
+                                <option value="Retail Shop">Retail Shop</option>
+                                <option value="Professional Services">Professional Services (Accountant, Lawyer, etc.)</option>
+                                <option value="Home Services">Home Services (Cleaning, Gardening, etc.)</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Project Details -->
+                        <div class="fs-field">
+                            <label class="fs-label" for="services">What do you need? *</label>
+                            <select class="fs-select" id="services" name="services" required>
+                                <option value="">Select a service...</option>
+                                <option value="New Website - Simple (1-3 pages)">New Website - Simple (1-3 pages)</option>
+                                <option value="New Website - Standard (4-6 pages)">New Website - Standard (4-6 pages)</option>
+                                <option value="New Website - Complex (booking/payment)">New Website - Complex (booking/payment system)</option>
+                                <option value="Website Redesign">Website Redesign</option>
+                                <option value="Website Updates/Fixes">Website Updates/Fixes</option>
+                                <option value="Not Sure Yet">Not Sure Yet - Need Advice</option>
+                            </select>
+                        </div>
+
+                        <div class="fs-field">
+                            <label class="fs-label" for="timeline">When do you need it? *</label>
+                            <select class="fs-select" id="timeline" name="timeline" required>
+                                <option value="">Select a timeframe...</option>
+                                <option value="ASAP (within 2 weeks)">ASAP (within 2 weeks)</option>
+                                <option value="Within a month">Within a month</option>
+                                <option value="1-3 months">1-3 months</option>
+                                <option value="Just planning ahead">Just planning ahead</option>
+                            </select>
+                        </div>
+
+                        <div class="fs-field">
+                            <label class="fs-label" for="budget">Approximate Budget *</label>
+                            <select class="fs-select" id="budget" name="budget" required>
+                                <option value="">Select your budget...</option>
+                                <option value="£250-£500">£250-£500</option>
+                                <option value="£500-£1000">£500-£1,000</option>
+                                <option value="£1000+">£1,000+</option>
+                                <option value="Not sure">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="fs-field">
+                            <label class="fs-label" for="message">Tell Me About Your Project *</label>
+                            <textarea class="fs-textarea" id="message" name="message" rows="5" placeholder="What are your goals for the website? What features do you need? Any examples you like?" required></textarea>
+                            <p class="fs-description">The more details you share, the better I can help!</p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="fs-button-group">
+                            <button class="fs-button" type="submit">Get My Free Quote</button>
+                        </div>
+
+                        <p class="text-center text-muted mt-4 small">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+                                <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                            Your information is safe and will never be shared
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar with Trust Elements -->
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="contact-sidebar">
+                    <!-- Testimonial -->
+                    <div class="testimonial-card mb-4">
+                        <div class="stars mb-2">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"I would just like to thank Ryan for my beautiful website. And for all of his support, 
+                          no matter what time I messaged him he always got back to me straight away. I am over the moon with my website. He has also saved me money by creating it the way he did. Thank you Ryan. Very highly recommend."</p>
+                        <p class="testimonial-author">— Traci Barbero - Resin Keepsake</p>
+                    </div>
+
+                    <!-- Why Choose Section -->
+                    <div class="why-choose-card">
+                        <h3 class="h5 mb-3">Why Work With Me?</h3>
+                        <ul class="why-list">
+                            <li>✓ <strong>Fixed prices</strong> — No hidden fees or surprises</li>
+                            <li>✓ <strong>Fast turnaround</strong> — 2-3 weeks, not months</li>
+                            <li>✓ <strong>Tech professional</strong> — I code for a living</li>
+                            <li>✓ <strong>Plain English</strong> — No confusing jargon</li>
+                            <li>✓ <strong>Responsive support</strong> — 24-hour replies</li>
+                            <li>✓ <strong>Money-back guarantee</strong> — 30 days, no questions</li>
+                        </ul>
+                    </div>
+
+                    <!-- What Happens Next -->
+                    <div class="process-card mt-4">
+                        <h3 class="h5 mb-3">What Happens Next?</h3>
+                        <ol class="process-list">
+                            <li><strong>You submit the form</strong> (takes 2 minutes)</li>
+                            <li><strong>I review your needs</strong> and prepare a quote</li>
+                            <li><strong>You get a reply within 24 hours</strong> with pricing</li>
+                            <li><strong>We chat</strong> if you have questions</li>
+                            <li><strong>I build your site</strong> if you're happy to proceed</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
         <script src="myscripts.js" async defer></script>
         <div class="container-fluid">
