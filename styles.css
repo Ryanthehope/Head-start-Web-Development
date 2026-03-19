@@ -61,7 +61,7 @@ h3 {
 }
 
 .nav-link.active {
-  border-bottom: 3px solid #ffb700;
+  border-bottom: 3px solid var(--color-highlight);
   padding-bottom: 2px;
   transition: all 0.3s ease;
 }

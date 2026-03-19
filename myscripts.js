@@ -51,7 +51,7 @@ function highlightActiveNavLink() {
         const href = link.getAttribute('href');
         if (href.includes(currentPage) || (currentPage === '' && href.includes('index.html'))) {
             link.classList.add('active');
-            link.style.color = '#ffb700';
+            link.style.color = '#fdcf4c';
             link.style.fontWeight = 'bold';
         }
     });
