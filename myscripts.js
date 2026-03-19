@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // ===== PERFORMANCE: OPTIMIZE FONT LOADING =====
     optimizeFontLoading();
+    
+    // ===== COOKIE CONSENT =====
+    checkCookieConsent();
 });
 
 // ===== PERFORMANCE UTILITIES =====
@@ -187,3 +190,75 @@ function enableSmoothScroll() {
     });
 }
 
+
+// ===== COOKIE CONSENT & GDPR COMPLIANCE =====
+
+/**
+ * Check if user has previously given/rejected cookie consent
+ * Show banner if no consent recorded
+ */
+function checkCookieConsent() {
+    const consent = localStorage.getItem('cookieConsent');
+    const banner = document.getElementById('cookie-banner');
+    
+    if (!banner) return;
+    
+    if (!consent) {
+        // No consent recorded - show banner
+        banner.style.display = 'block';
+    } else if (consent === 'accepted') {
+        // User previously accepted - load analytics
+        loadGoogleAnalytics();
+    }
+    // If rejected, do nothing (no analytics loaded)
+}
+
+/**
+ * User accepts cookies - store consent and load analytics
+ */
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+    loadGoogleAnalytics();
+}
+
+/**
+ * User rejects cookies - store rejection and hide banner
+ */
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+    // Do not load analytics
+}
+
+/**
+ * Load Google Analytics after user consent
+ * Implements privacy-friendly tracking with IP anonymization
+ */
+function loadGoogleAnalytics() {
+    // Check if already loaded
+    if (window.dataLayer && window.dataLayer.length > 0) {
+        return;
+    }
+    
+    // Create and inject GA4 script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HND1DBBSSD';
+    document.head.appendChild(script);
+    
+    // Initialize dataLayer and gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HND1DBBSSD', {
+        'anonymize_ip': true,  // GDPR: Anonymize IP addresses
+        'cookie_flags': 'SameSite=None;Secure'  // Security best practice
+    });
+}

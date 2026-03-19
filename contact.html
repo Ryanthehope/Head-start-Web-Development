@@ -137,16 +137,8 @@
   ]
   </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HND1DBBSSD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HND1DBBSSD');
-</script>
     <body>
+      <a href="#content" class="skip-link">Skip to main content</a>
       <div class="container-fluid gradient-background">
          <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom">
     <div class="col-md-3 mb-2 mb-md-0">
@@ -240,22 +232,6 @@
                             <input class="fs-input" type="text" id="business" name="business" placeholder="Your business name" />
                         </div>
 
-                        <div class="fs-field">
-                            <label class="fs-label" for="businessType">Type of Business *</label>
-                            <select class="fs-select" id="businessType" name="businessType" required>
-                                <option value="">Select your industry...</option>
-                                <option value="Beauty & Spa">Beauty & Spa</option>
-                                <option value="Trades (Plumber, Electrician, Builder)">Trades (Plumber, Electrician, Builder)</option>
-                                <option value="Pet Services">Pet Services (Grooming, Walking, Sitting)</option>
-                                <option value="Fitness & Wellness">Fitness & Wellness</option>
-                                <option value="Restaurant & Cafe">Restaurant & Cafe</option>
-                                <option value="Retail Shop">Retail Shop</option>
-                                <option value="Professional Services">Professional Services (Accountant, Lawyer, etc.)</option>
-                                <option value="Home Services">Home Services (Cleaning, Gardening, etc.)</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
                         <!-- Project Details -->
                         <div class="fs-field">
                             <label class="fs-label" for="services">What do you need? *</label>
@@ -279,24 +255,6 @@
                                 <option value="1-3 months">1-3 months</option>
                                 <option value="Just planning ahead">Just planning ahead</option>
                             </select>
-                        </div>
-
-                        <div class="fs-field">
-                            <label class="fs-label" for="budget">Approximate Budget *</label>
-                            <select class="fs-select" id="budget" name="budget" required>
-                                <option value="">Select your budget...</option>
-                                <option value="£350-£500">£350-£500</option>
-                                <option value="£500-£1000">£500-£1,000</option>
-                                <option value="£1000+">£1,000+</option>
-                                <option value="Not sure">Not sure yet</option>
-                            </select>
-                        </div>
-
-                        <!-- Message -->
-                        <div class="fs-field">
-                            <label class="fs-label" for="message">Tell Me About Your Project *</label>
-                            <textarea class="fs-textarea" id="message" name="message" rows="5" placeholder="What are your goals for the website? What features do you need? Any examples you like?" required></textarea>
-                            <p class="fs-description">The more details you share, the better I can help!</p>
                         </div>
 
                         <!-- Submit Button -->
@@ -401,6 +359,17 @@
                 </li> 
                 </ul>
         </footer>
+        </div>
+        
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-banner" class="cookie-banner" style="display: none;">
+          <div class="cookie-content">
+            <p class="mb-0"><strong>We use cookies</strong> to improve your experience. We use Google Analytics to understand how visitors use our site. <a href="#" class="cookie-link">Learn more</a></p>
+            <div class="cookie-buttons">
+              <button onclick="acceptCookies()" class="btn-cookie-accept">Accept</button>
+              <button onclick="rejectCookies()" class="btn-cookie-reject">Reject</button>
+            </div>
+          </div>
         </div>
     </body>
 </html>
