@@ -463,25 +463,6 @@ fieldset {
   outline: none;
 }
 
-/* Utility classes */
-.col-span-full {
-  grid-column: 1 / -1;
-}
-
-.slider-label-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 0.25rem;
-}
-
-.slider-label-text {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  white-space: nowrap;
-}
-
 /* Animations */
 .fade-in {
   opacity: 0;
@@ -789,51 +770,6 @@ fieldset {
   }
 }
 
-/* Success/Error Message Styling */
-.form-message {
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  animation: slideDown 0.4s ease;
-}
-
-.form-message.success {
-  background: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
-}
-
-.form-message.error {
-  background: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Input Focus Glow Effect */
-@keyframes inputGlow {
-  0%, 100% {
-    box-shadow: var(--color-border-active) 0 0 0 2px inset, 0 4px 12px rgba(218, 113, 5, 0.15);
-  }
-  50% {
-    box-shadow: var(--color-border-active) 0 0 0 2px inset, 0 4px 16px rgba(218, 113, 5, 0.25);
-  }
-}
-
 /* ===== HOMEPAGE ENHANCEMENTS ===== */
 
 /* Hero Section */
@@ -843,16 +779,14 @@ fieldset {
 }
 
 .hero-title {
-  background: linear-gradient(135deg, #27548A 0%, #183B4E 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #183B4E;
   margin-bottom: 1.5rem !important;
   animation: fadeInUp 0.8s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtitle {
-  color: var(--color-text-muted);
+  color: #2c3e50;
   font-size: 1.5rem;
   font-weight: 400;
   max-width: 800px;
@@ -1631,7 +1565,6 @@ fieldset {
     padding: 0.6rem 1.2rem;
   }
   
-  .addon-card,
   .cost-factor-card,
   .included-feature {
     margin-bottom: 1.5rem;

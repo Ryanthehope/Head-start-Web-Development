@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://head-start-web.co.uk/sitemap.xml
+Sitemap: https://head-startwebdevelopment.co.uk/sitemap.xml
 
 # Crawl-delay for good citizenship
 Crawl-delay: 1

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ===== COPYRIGHT YEAR =====
     const copyright = document.getElementById("copyright");
     if (copyright) {
-        copyright.innerHTML = `&copy; ${new Date().getFullYear()}`;
+        copyright.textContent = new Date().getFullYear();
     }
 
     // ===== ACTIVE NAV LINK HIGHLIGHTING =====
@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setupFormValidation();
 
     // ===== SEO: ADD STRUCTURED DATA =====
-    addStructuredData();
+    // Moved to HTML <head> tags for better crawlability
+    // addStructuredData();
 
     // ===== SMOOTH SCROLLING =====
     enableSmoothScroll();
@@ -25,25 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ===== PERFORMANCE UTILITIES =====
-
-/**
- * Debounce function to limit how often a function can be called
- * Useful for scroll, resize, and input events
- * @param {Function} func - The function to debounce
- * @param {number} wait - Time to wait in milliseconds
- * @returns {Function} - Debounced function
- */
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func.apply(this, args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
 
 /**
  * Optimize font loading with font-display: swap
@@ -187,32 +169,6 @@ function clearError(input) {
     if (errorMsg && errorMsg.classList.contains('error-message')) {
         errorMsg.remove();
     }
-}
-
-// ===== SEO: STRUCTURED DATA (JSON-LD) =====
-function addStructuredData() {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Head-Start Web Development",
-        "url": "https://www.head-startwebdevelopment.co.uk",
-        "logo": "https://www.head-startwebdevelopment.co.uk/Logo/Logo.png",
-        "description": "Affordable web design and development services for small businesses",
-        "telephone": "07754858861",
-        "email": "headstartwebdevelopment@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "UK"
-        },
-        "sameAs": [
-            "https://www.instagram.com/headstart_webdevelopment"
-        ],
-        "areaServed": ["Banbury", "Bicester", "Brackley", "Chipping Norton", "Oxfordshire", "United Kingdom"],
-        "priceRange": "£250-£1000+"
-    });
-    document.head.appendChild(script);
 }
 
 // ===== SMOOTH SCROLLING FOR ANCHOR LINKS =====
