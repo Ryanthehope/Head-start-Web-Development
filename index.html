@@ -6,7 +6,7 @@
   <meta name="description" content="Professional web design in Banbury from £350. Built by a tech professional for small businesses and sole traders in Banbury, Bicester, and North Oxfordshire. 30-day satisfaction guarantee.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Ryan Thornton">
-  <title>Affordable Web Design Banbury From £350 | Websites for Small Businesses and Sole Traders</title>
+  <title>Web Design Banbury from £350 | Small Business Websites</title>
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.head-startwebdevelopment.co.uk/">
@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://www.head-startwebdevelopment.co.uk/">
   <meta property="og:title" content="Affordable Web Design from £350">
   <meta property="og:description" content="Professional websites for small businesses and sole traders in Banbury, Bicester, and North Oxfordshire. Fast, affordable, and SEO-friendly from day one.">
-  <meta property="og:image" content="https://www.head-startwebdevelopment.co.uk/Logo/Logo.webp">
+  <meta property="og:image" content="https://www.head-startwebdevelopment.co.uk/Logo/colour-logo.png">
   
   <link rel="stylesheet" href="bootstrap-purged.css">
   <link rel="stylesheet" href="styles.css" type="text/css">
@@ -34,7 +34,7 @@
     "@type": "LocalBusiness",
     "name": "Head-Start Web Development",
     "url": "https://www.head-startwebdevelopment.co.uk",
-    "logo": "https://www.head-startwebdevelopment.co.uk/Logo/Logo.webp",
+    "logo": "https://www.head-startwebdevelopment.co.uk/Logo/colour-logo.png",
     "description": "Affordable web design and development services for small businesses in Banbury and North Oxfordshire",
     "telephone": "07754858861",
     "email": "headstartwebdevelopment@gmail.com",
@@ -68,7 +68,42 @@
       "Oxfordshire",
       "United Kingdom"
     ],
-    "priceRange": "£350-£1000+"
+    "priceRange": "£350-£1000+",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "2"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Traci Barbero"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "I would just like to thank Ryan for my beautiful website. And for all of his support, no matter what time I messaged him he always got back to me straight away. I am over the moon with my website. He has also saved me money by creating it the way he did. Thank you Ryan. Very highly recommend.",
+        "datePublished": "2026-03-15"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Tim Morris"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Used recently to create a new website for my business. Both the level of service and communication were excellent. The finished website came out perfect. I was kept in the loop throughout the entire process and any changes that I requested were quickly applied. I was very happy with the pricing. Very competitive compared to other quotes I'd received. Would absolutely recommend.",
+        "datePublished": "2026-03-10"
+      }
+    ]
   }
   </script>
 </head>
@@ -76,9 +111,9 @@
       <div class="container-fluid gradient-background">
          <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom">
     <div class="col-md-3 mb-2 mb-md-0">
-        <picture>
-            <source type="image/webp" srcset="./Logo/Logo.webp">
-            <img src="./Logo/Logo.webp" width="250" height="100" fetchpriority="high" alt="Head Start Web Development Logo">
+        <picture class="logo-gradient">
+            <source type="image/webp" srcset="./Logo/colour-logo.png">
+            <img src="./Logo/colour-logo.png" width="250" height="100" fetchpriority="high" alt="Head Start Web Development Logo">
         </picture>
     </div>
     <div class="col-md-6 d-flex align-items-center justify-content-center">
@@ -286,7 +321,7 @@ Every website is hand-coded (no templates or page builders), built for speed, an
             <div class="col-md-6">
               <div class="guarantee-badge">
                 <div class="badge-icon">🛡️</div>
-                <h3 class="text-success fw-bold mb-3">100% Satisfaction Guaranteed</h3>
+                <h3 class="text-purple fw-bold mb-3">100% Satisfaction Guaranteed</h3>
                 <p class="mb-4 lead">Not happy with your website? I'll make it right or your money back within 30 days. No questions asked.</p>
                 
                 <div class="guarantee-features">
@@ -419,8 +454,8 @@ Every website is hand-coded (no templates or page builders), built for speed, an
           <div class="cookie-content">
             <p class="mb-0"><strong>We use cookies</strong> to improve your experience. We use Google Analytics to understand how visitors use our site. <a href="#" class="cookie-link">Learn more</a></p>
             <div class="cookie-buttons">
-              <button onclick="acceptCookies()" class="btn-cookie-accept">Accept</button>
-              <button onclick="rejectCookies()" class="btn-cookie-reject">Reject</button>
+              <button id="cookie-accept-btn" class="btn-cookie-accept">Accept</button>
+              <button id="cookie-reject-btn" class="btn-cookie-reject">Reject</button>
             </div>
           </div>
         </div>
