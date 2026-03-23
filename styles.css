@@ -8,7 +8,7 @@
   position: absolute;
   top: -40px;
   left: 0;
-  background: #180161;
+  background: #1E3A5F;
   color: white;
   padding: 8px 16px;
   text-decoration: none;
@@ -45,7 +45,7 @@ select:focus-visible {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #180161;
+  background: #1E3A5F;
   color: white;
   padding: 1.5rem;
   box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
@@ -240,7 +240,7 @@ h3 {
 /* Footer and background */
 footer,
 .gradient-background {
-  background: linear-gradient(300deg, #0a0030, #180161, #4F1787, #180161, #0a0030);
+  background: linear-gradient(300deg, #0a1628, #1E3A5F, #2C5F8D, #1E3A5F, #0a1628);
   background-size: 400% 400%;
   animation: gradient-animation 25s ease infinite;
 }
@@ -259,8 +259,8 @@ footer,
 
 /* Subtle Background Colors for Visual Variety */
 .bg-blue-subtle {
-  background: linear-gradient(135deg, rgba(24, 1, 97, 0.04), rgba(79, 23, 135, 0.05)) !important;
-  border: 1px solid rgba(79, 23, 135, 0.12);
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.04), rgba(44, 95, 141, 0.05)) !important;
+  border: 1px solid rgba(30, 58, 95, 0.12);
 }
 
 .bg-green-subtle {
@@ -269,33 +269,67 @@ footer,
 }
 
 .bg-warm-subtle {
-  background: linear-gradient(135deg, rgba(79, 23, 135, 0.06), rgba(251, 119, 60, 0.04)) !important;
-  border: 1px solid rgba(79, 23, 135, 0.12);
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.06), rgba(251, 119, 60, 0.04)) !important;
+  border: 1px solid rgba(30, 58, 95, 0.12);
 }
 
 /* Logo Gradient Effect */
 .logo-gradient {
   position: relative;
   display: inline-block;
-  filter: drop-shadow(0 0 20px rgba(10, 0, 48, 0.5)) drop-shadow(0 0 35px rgba(79, 23, 135, 0.4));
+  filter: drop-shadow(0 0 20px rgba(10, 22, 40, 0.5)) drop-shadow(0 0 35px rgba(30, 58, 95, 0.4));
   animation: logo-glow 25s ease infinite;
 }
 
 /* Text Color Utilities */
 .text-purple {
-  color: #4F1787 !important;
+  color: #2C5F8D !important;
 }
 
 @keyframes logo-glow {
   0% {
-    filter: drop-shadow(0 0 20px rgba(10, 0, 48, 0.5)) drop-shadow(0 0 35px rgba(79, 23, 135, 0.4));
+    filter: drop-shadow(0 0 20px rgba(10, 22, 40, 0.5)) drop-shadow(0 0 35px rgba(30, 58, 95, 0.4));
   }
   50% {
-    filter: drop-shadow(0 0 30px rgba(24, 1, 97, 0.6)) drop-shadow(0 0 45px rgba(79, 23, 135, 0.5));
+    filter: drop-shadow(0 0 30px rgba(30, 58, 95, 0.6)) drop-shadow(0 0 45px rgba(44, 95, 141, 0.5));
   }
   100% {
-    filter: drop-shadow(0 0 20px rgba(10, 0, 48, 0.5)) drop-shadow(0 0 35px rgba(79, 23, 135, 0.4));
+    filter: drop-shadow(0 0 20px rgba(10, 22, 40, 0.5)) drop-shadow(0 0 35px rgba(30, 58, 95, 0.4));
   }
+}
+
+/* Page Title Section */
+.page-title-section {
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.06), rgba(251, 119, 60, 0.04));
+  border-left: 5px solid #FB773C;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(30, 58, 95, 0.08);
+  transition: all 0.3s ease;
+}
+
+.page-title-section:hover {
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.12);
+  transform: translateY(-2px);
+}
+
+.page-title-section h1 {
+  color: #1E3A5F;
+  position: relative;
+  display: inline-block;
+}
+
+.page-title-section h1::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FB773C, #FFA500);
+  border-radius: 2px;
 }
 
 #copyright {
@@ -598,7 +632,7 @@ textarea {
 }
 
 .testimonial-card {
-  background: #4F1787;
+  background: #2C5F8D;
   color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -804,7 +838,7 @@ textarea {
 }
 
 .hero-title {
-  color: #180161;
+  color: #1E3A5F;
   margin-bottom: 1.5rem !important;
   animation: fadeInUp 0.8s ease;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -997,7 +1031,7 @@ textarea {
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  border: 3px solid #4F1787;
+  border: 3px solid #2C5F8D;
   position: relative;
   overflow: hidden;
 }
@@ -1078,7 +1112,7 @@ textarea {
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: #4F1787;
+  background: #2C5F8D;
   color: white;
   border-radius: 50%;
   font-weight: bold;
@@ -1098,10 +1132,10 @@ textarea {
 .guarantee-quote {
   font-size: 1.3rem;
   font-style: italic;
-  color: #4F1787;
+  color: #2C5F8D;
   font-weight: 600;
   padding-left: 1.5rem;
-  border-left: 4px solid #4F1787;
+  border-left: 4px solid #2C5F8D;
   margin: 2rem 0;
 }
 
@@ -1181,7 +1215,7 @@ textarea {
 }
 
 .trust-badge-pill {
-  background: #4F1787;
+  background: #2C5F8D;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
@@ -1275,17 +1309,17 @@ textarea {
 }
 
 .pricing-card.popular {
-  border-color: #4F1787;
+  border-color: #2C5F8D;
   border-width: 3px;
-  box-shadow: 0 8px 30px rgba(79, 23, 135, 0.15);
+  box-shadow: 0 8px 30px rgba(44, 95, 141, 0.15);
 }
 
 .pricing-card.popular:hover {
-  box-shadow: 0 20px 50px rgba(79, 23, 135, 0.25);
+  box-shadow: 0 20px 50px rgba(44, 95, 141, 0.25);
 }
 
 .popular-badge {
-  background: #4F1787;
+  background: #2C5F8D;
   color: white;
   text-align: center;
   padding: 0.5rem;
@@ -1314,7 +1348,7 @@ textarea {
 }
 
 .pricing-card.popular .package-name {
-  color: #4F1787;
+  color: #2C5F8D;
 }
 
 .best-for {
@@ -1352,7 +1386,7 @@ textarea {
 
 .pricing-card.popular .currency,
 .pricing-card.popular .price {
-  color: #4F1787;
+  color: #2C5F8D;
 }
 
 .price-plus {
@@ -1389,7 +1423,7 @@ textarea {
 }
 
 .feature-list .check {
-  color: #4F1787;
+  color: #2C5F8D;
   font-weight: bold;
   font-size: 1.2rem;
   flex-shrink: 0;
@@ -1412,20 +1446,20 @@ textarea {
 }
 
 .btn-pricing:hover {
-  background: #180161;
+  background: #1E3A5F;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(39, 84, 138, 0.3);
   color: white;
 }
 
 .btn-pricing.primary {
-  background: #4F1787;
-  border-color: #4F1787;
+  background: #2C5F8D;
+  border-color: #2C5F8D;
 }
 
 .btn-pricing.primary:hover {
-  background: #4F1787;
-  box-shadow: 0 8px 20px rgba(79, 23, 135, 0.4);
+  background: #2C5F8D;
+  box-shadow: 0 8px 20px rgba(44, 95, 141, 0.4);
 }
 
 /* Comparison Table */
@@ -1445,7 +1479,7 @@ textarea {
 }
 
 .comparison-table thead {
-  background: #4F1787;
+  background: #2C5F8D;
   color: white;
 }
 
@@ -1457,7 +1491,7 @@ textarea {
 }
 
 .comparison-table .popular-col {
-  background: #4F1787;
+  background: #2C5F8D;
   position: relative;
 }
 
@@ -1482,7 +1516,7 @@ textarea {
 }
 
 .table-check {
-  color: #4F1787;
+  color: #2C5F8D;
   font-size: 1.5rem;
   font-weight: bold;
 }
