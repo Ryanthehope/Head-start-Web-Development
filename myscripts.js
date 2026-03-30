@@ -203,18 +203,6 @@ function checkCookieConsent() {
     
     if (!banner) return;
     
-    // Set up event listeners for cookie buttons
-    const acceptBtn = document.getElementById('cookie-accept-btn');
-    const rejectBtn = document.getElementById('cookie-reject-btn');
-    
-    if (acceptBtn) {
-        acceptBtn.addEventListener('click', acceptCookies);
-    }
-    
-    if (rejectBtn) {
-        rejectBtn.addEventListener('click', rejectCookies);
-    }
-    
     if (!consent) {
         // No consent recorded - show banner
         banner.style.display = 'block';

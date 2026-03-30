@@ -695,18 +695,6 @@ textarea {
 }
 
 /* Sidebar Cards */
-.contact-sidebar {
-  position: sticky;
-  top: 2rem;
-}
-
-/* Make sidebar non-sticky on tablets and mobile */
-@media (max-width: 991px) {
-  .contact-sidebar {
-    position: static;
-    margin-top: 3rem;
-  }
-}
 
 .testimonial-card {
   background: #2C5F8D;
@@ -837,12 +825,8 @@ textarea {
 
 /* Responsive Design for Contact Page */
 
-/* Tablet and below - ensure sidebar doesn't overlap */
+/* Tablet and below */
 @media (max-width: 991px) {
-  .contact-sidebar {
-    margin-top: 3rem;
-  }
-  
   .col-lg-8, .col-lg-4 {
     margin-bottom: 2rem;
   }
@@ -853,12 +837,6 @@ textarea {
   .contact-form-wrapper {
     padding: 1.5rem 1rem;
     margin-bottom: 2rem;
-  }
-  
-  .contact-sidebar {
-    position: static !important;
-    margin-top: 2rem;
-    margin-bottom: 8rem; /* Extra space for cookie banner */
   }
   
   .quick-contact-options {
