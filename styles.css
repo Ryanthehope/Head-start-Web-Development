@@ -160,11 +160,11 @@ select:focus-visible {
   --bs-link-hover-color: black;
   --color-background: #e7e7e7;
   --color-background-alt: #888888;
-  --color-border-active: #FB773C;
+  --color-border-active: #E65D2F;
   --color-border-default: #d1d1d1;
   --color-highlight: #FFC107;
-  --color-primary: #FB773C;
-  --color-primary-active: #E8642F;
+  --color-primary: #E65D2F;
+  --color-primary-active: #D4521F;
   --color-text-default: #262626;
   --color-text-muted: #4f4f4f;
   --font-family-body: "Figtree", system-ui, sans-serif;
@@ -395,6 +395,37 @@ footer,
     padding: 0.4rem 0.5rem !important;
     font-size: 0.85rem;
   }
+  
+  /* Team section images on very small screens */
+  .team-intro img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .team-intro .gap-3 {
+    gap: 0.75rem !important;
+  }
+}
+
+/* ===== TEAM SECTION STYLES ===== */
+
+/* Subtle hover effect for team members */
+.team-intro .d-flex:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  margin: -0.5rem;
+}
+
+/* Ensure images never distort */
+.team-intro img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-intro .d-flex:hover img {
+  transform: scale(1.05);
 }
 
 #copyright {
@@ -932,26 +963,29 @@ textarea {
 }
 
 .cta-button {
-  background: #FB773C;
+  background: #E65D2F;
   border: none;
+  color: #fff;
 }
 
 .cta-button:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 8px 25px rgba(230, 93, 47, 0.4);
+  background: #D4521F;
+  color: #fff;
 }
 
 .cta-button-secondary {
-  border: 2px solid #FB773C;
-  color: #FB773C;
+  border: 2px solid #E65D2F;
+  color: #E65D2F;
   background: white;
 }
 
 .cta-button-secondary:hover {
-  background: #FB773C;
-  color: white;
+  background: #E65D2F;
+  color: #fff;
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 8px 25px rgba(230, 93, 47, 0.4);
 }
 
 /* Social Proof Bar */
@@ -1195,19 +1229,21 @@ textarea {
 }
 
 .btn-success {
-  background: #FB773C;
+  background: #E65D2F;
   border: none;
   border-radius: 50px;
   padding: 1rem 2.5rem;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(251, 119, 60, 0.3);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(230, 93, 47, 0.3);
   transition: all 0.3s ease;
 }
 
 .btn-success:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(251, 119, 60, 0.4);
-  background: #E8642F;
+  box-shadow: 0 8px 25px rgba(230, 93, 47, 0.4);
+  background: #D4521F;
+  color: #fff;
 }
 
 /* Responsive Design for Homepage */
@@ -1779,11 +1815,11 @@ textarea {
 }
 
 .btn-outline-secondary:hover {
-  background: #FB773C;
-  border-color: #FB773C;
-  color: white;
+  background: #E65D2F;
+  border-color: #E65D2F;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(39, 84, 138, 0.3);
+  box-shadow: 0 4px 12px rgba(230, 93, 47, 0.3);
 }
 
 .btn-outline-secondary svg {

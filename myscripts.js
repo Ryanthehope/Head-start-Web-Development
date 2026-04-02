@@ -26,7 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // ===== COOKIE CONSENT =====
     checkCookieConsent();
+    setupCookieButtons();
 });
+
+const TRACKING_CONFIG = {
+    ga4MeasurementId: 'G-HND1DBBSSD',
+    gtmContainerId: ''
+};
 
 // ===== PERFORMANCE UTILITIES =====
 
@@ -194,23 +200,36 @@ function enableSmoothScroll() {
 // ===== COOKIE CONSENT & GDPR COMPLIANCE =====
 
 /**
+ * Setup event listeners for cookie consent buttons
+ */
+function setupCookieButtons() {
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    const rejectBtn = document.getElementById('cookie-reject-btn');
+    
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', acceptCookies);
+    }
+    
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', rejectCookies);
+    }
+}
+
+/**
  * Check if user has previously given/rejected cookie consent
  * Show banner if no consent recorded
  */
 function checkCookieConsent() {
     const consent = localStorage.getItem('cookieConsent');
     const banner = document.getElementById('cookie-banner');
-    
-    if (!banner) return;
-    
+
     if (!consent) {
-        // No consent recorded - show banner
-        banner.style.display = 'block';
+        if (banner) {
+            banner.style.display = 'block';
+        }
     } else if (consent === 'accepted') {
-        // User previously accepted - load analytics
-        loadGoogleAnalytics();
+        loadTracking();
     }
-    // If rejected, do nothing (no analytics loaded)
 }
 
 /**
@@ -222,7 +241,7 @@ function acceptCookies() {
     if (banner) {
         banner.style.display = 'none';
     }
-    loadGoogleAnalytics();
+    loadTracking();
 }
 
 /**
@@ -238,27 +257,55 @@ function rejectCookies() {
 }
 
 /**
- * Load Google Analytics after user consent
- * Implements privacy-friendly tracking with IP anonymization
+ * Load tracking after user consent.
+ * Prefer GTM when a container ID is configured, otherwise fall back to direct GA4.
  */
-function loadGoogleAnalytics() {
-    // Check if already loaded
-    if (window.dataLayer && window.dataLayer.length > 0) {
+function loadTracking() {
+    if (TRACKING_CONFIG.gtmContainerId) {
+        loadGoogleTagManager(TRACKING_CONFIG.gtmContainerId);
         return;
     }
-    
-    // Create and inject GA4 script
+
+    if (TRACKING_CONFIG.ga4MeasurementId) {
+        loadGoogleAnalytics(TRACKING_CONFIG.ga4MeasurementId);
+    }
+}
+
+function loadGoogleAnalytics(measurementId) {
+    if (document.querySelector(`script[data-ga-measurement="${measurementId}"]`)) {
+        return;
+    }
+
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HND1DBBSSD';
+    script.dataset.gaMeasurement = measurementId;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
     document.head.appendChild(script);
-    
-    // Initialize dataLayer and gtag
+
     window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
+    window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+    const gtag = window.gtag;
     gtag('js', new Date());
-    gtag('config', 'G-HND1DBBSSD', {
-        'anonymize_ip': true,  // GDPR: Anonymize IP addresses
-        'cookie_flags': 'SameSite=None;Secure'  // Security best practice
+    gtag('config', measurementId, {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
     });
+}
+
+function loadGoogleTagManager(containerId) {
+    if (document.querySelector(`script[data-gtm-container="${containerId}"]`)) {
+        return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+    });
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.dataset.gtmContainer = containerId;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${containerId}`;
+    document.head.appendChild(script);
 }
