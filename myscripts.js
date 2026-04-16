@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const TRACKING_CONFIG = {
-    ga4MeasurementId: 'G-HND1DBBSSD',
+    ga4MeasurementIds: ['G-N6MKJ0LSHL', 'G-HND1DBBSSD'],
     gtmContainerId: ''
 };
 
@@ -266,8 +266,8 @@ function loadTracking() {
         return;
     }
 
-    if (TRACKING_CONFIG.ga4MeasurementId) {
-        loadGoogleAnalytics(TRACKING_CONFIG.ga4MeasurementId);
+    if (TRACKING_CONFIG.ga4MeasurementIds && TRACKING_CONFIG.ga4MeasurementIds.length > 0) {
+        TRACKING_CONFIG.ga4MeasurementIds.forEach(id => loadGoogleAnalytics(id));
     }
 }
 

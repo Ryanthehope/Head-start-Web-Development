@@ -398,30 +398,40 @@ footer,
   
   /* Team section images on very small screens */
   .team-intro img {
-    width: 90px;
-    height: 90px;
-  }
-  
-  .team-intro .gap-3 {
-    gap: 0.75rem !important;
+    width: 150px;
+    height: 150px;
   }
 }
 
 /* ===== TEAM SECTION STYLES ===== */
 
 /* Subtle hover effect for team members */
-.team-intro .d-flex:hover {
+.team-intro .text-center:hover {
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  padding: 0.5rem;
+  border-radius: 12px;
+  padding: 1rem;
   transition: all 0.3s ease;
-  margin: -0.5rem;
+  margin: -1rem;
+}
+
+.team-intro .text-center:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* Ensure images never distort */
-.team-intro img {
+.team-intro img,
+.team-intro .rounded-circle {
   object-fit: cover;
   transition: transform 0.3s ease;
+  border: 4px solid #E65D2F;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-radius: 50% !important;
+  filter: contrast(1.02) brightness(1.0) saturate(0.95);
+  image-rendering: -webkit-optimize-contrast;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .team-intro .d-flex:hover img {
