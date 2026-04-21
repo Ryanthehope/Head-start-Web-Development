@@ -199,6 +199,46 @@ function enableSmoothScroll() {
 
 // ===== COOKIE CONSENT & GDPR COMPLIANCE =====
 
+// ===== GOOGLE ANALYTICS CLICK TRACKING =====
+document.addEventListener('DOMContentLoaded', function () {
+    // Track clicks on main CTA buttons
+    var ctaButtons = document.querySelectorAll('.btn-primary, .cta-button, .btn-success');
+    ctaButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (window.gtag) {
+                gtag('event', 'click', {
+                    'event_category': 'CTA',
+                    'event_label': btn.textContent.trim()
+                });
+            }
+        });
+    });
+
+    // Track clicks on email and tel links
+    var emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.gtag) {
+                gtag('event', 'click', {
+                    'event_category': 'Email',
+                    'event_label': link.getAttribute('href')
+                });
+            }
+        });
+    });
+    var telLinks = document.querySelectorAll('a[href^="tel:"]');
+    telLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.gtag) {
+                gtag('event', 'click', {
+                    'event_category': 'Phone',
+                    'event_label': link.getAttribute('href')
+                });
+            }
+        });
+    });
+});
+
 /**
  * Setup event listeners for cookie consent buttons
  */
@@ -261,14 +301,8 @@ function rejectCookies() {
  * Prefer GTM when a container ID is configured, otherwise fall back to direct GA4.
  */
 function loadTracking() {
-    if (TRACKING_CONFIG.gtmContainerId) {
-        loadGoogleTagManager(TRACKING_CONFIG.gtmContainerId);
-        return;
-    }
-
-    if (TRACKING_CONFIG.ga4MeasurementIds && TRACKING_CONFIG.ga4MeasurementIds.length > 0) {
-        TRACKING_CONFIG.ga4MeasurementIds.forEach(id => loadGoogleAnalytics(id));
-    }
+    // Google Analytics is now loaded directly in the HTML <head> for reliability.
+    // No need to load GA dynamically here.
 }
 
 function loadGoogleAnalytics(measurementId) {
