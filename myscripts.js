@@ -84,8 +84,8 @@ function observeElements() {
 
     // Observe all cards, images, and text sections
     const elementsToObserve = document.querySelectorAll(
-        '.card, .col, img[loading="lazy"], .container > div'
-    );
+    '.card, .feature-card, .testimonial-card, .guarantee-badge'
+);
     elementsToObserve.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
