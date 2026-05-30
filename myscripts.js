@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const TRACKING_CONFIG = {
-    ga4MeasurementIds: ['G-N6MKJ0LSHL', 'G-HND1DBBSSD'],
+    ga4MeasurementIds: ['G-HND1DBBSSD'],
     gtmContainerId: ''
 };
 
