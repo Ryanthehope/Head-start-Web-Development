@@ -345,7 +345,7 @@ textarea {
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  color:#fd7e14;
 }
 
 .display-4 {
@@ -441,6 +441,11 @@ textarea {
   width: 100%;
 }
 
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
 .col-12 {
   flex: 0 0 auto;
   width: 100%;
@@ -477,17 +482,9 @@ textarea {
   }
 }
 @media (min-width: 768px) {
-  .row-cols-md-2 > * {
-    flex: 0 0 auto;
-    width: 50%;
-  }
   .row-cols-md-3 > * {
     flex: 0 0 auto;
     width: 33.33333333%;
-  }
-  .col-md-3 {
-    flex: 0 0 auto;
-    width: 25%;
   }
   .col-md-4 {
     flex: 0 0 auto;
@@ -845,38 +842,12 @@ textarea {
   }
 }
 
-.text-bg-primary {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
 .d-flex {
   display: flex !important;
 }
 
-.d-inline-flex {
-  display: inline-flex !important;
-}
-
 .shadow-sm {
   box-shadow: var(--bs-box-shadow-sm) !important;
-}
-
-.border {
-  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-}
-
-.border-top {
-  border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-}
-
-.border-bottom {
-  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-}
-
-.border-success {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
 }
 
 .flex-column {
@@ -1061,14 +1032,6 @@ textarea {
 
 .rounded-pill {
   border-radius: var(--bs-border-radius-pill) !important;
-}
-@media (min-width: 768px) {
-  .align-items-md-center {
-    align-items: center !important;
-  }
-  .mb-md-0 {
-    margin-bottom: 0 !important;
-  }
 }
 @media (min-width: 992px) {
   .py-lg-5 {

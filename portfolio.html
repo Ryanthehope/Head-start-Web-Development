@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
     <!-- Google Analytics (GA4) -->
@@ -127,203 +127,214 @@
     <body>
       <a href="#content" class="skip-link">Skip to main content</a>
       <div class="container-fluid gradient-background">
-         <header class="py-3 mb-4">
-    <div class="d-flex justify-content-center mb-3">
-        <picture class="logo-gradient">
-            <source type="image/webp" srcset="./Logo/Full%20logo.png">
-            <img src="./Logo/Full logo.png" width="400" height="160" fetchpriority="high" alt="Head Start Web Development Logo">
-        </picture>
-    </div>
-    <nav aria-label="Main navigation">
-        <ul class="nav justify-content-center">
-            <li><a href="index.html" class="nav-link px-2">Home</a></li>
-            <li><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
-            <li><a href="pricing.html" class="nav-link px-2">Pricing</a></li>
-            <li><a href="contact.html" class="nav-link px-2">Contact</a></li>
+         <header class="page-header py-3 mb-0">
+    <div class="d-flex align-items-center justify-content-between px-4">
+        <a href="index.html">
+            <picture class="logo-gradient">
+                <source type="image/webp" srcset="images/Head-Start%20HOME/Head-Start%20HOME/Home%20-%20Head-Start%20Logo%20-%20Multi.png">
+                <img src="images/Head-Start HOME/Head-Start HOME/Home - Head-Start Logo - Multi.png" width="180" height="72" fetchpriority="high" alt="Head Start Web Development Logo">
+            </picture>
+        </a>
+        <nav aria-label="Main navigation">
+            <ul class="nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <ul class="nav list-unstyled d-flex mb-0 align-items-center social-icons">
+            <li>
+                <a href="https://www.instagram.com/headstart_webdevelopment" aria-label="Instagram">
+                    <img src="images/Head-Start HOME/Head-Start HOME/Home - Insta .png" alt="Instagram" width="36" height="36">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=61577117251691" aria-label="Facebook">
+                    <img src="images/Head-Start HOME/Head-Start HOME/Home - facebook.png" alt="Facebook" width="36" height="36">
+                </a>
+            </li>
         </ul>
-    </nav>
+    </div>
 </header>
       </div>
         <main id="content">
-        <div class="container">
-          <div class="page-title-section my-5">
-            <h1 class="display-5 fw-bold text-dark mb-0">Banbury Website Designer - Portfolio</h1>
-          </div>
-        </div>
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h2 class="display-4 fw-bold text-dark">My Projects</h2>
-        <p>Here are a few examples of websites I've built for small businesses across Banbury, Bicester, and North Oxfordshire. Each site is designed to be clear, mobile-friendly and tailored to your goals.</p>
-        <p class="text-muted">Looking for a <a href="pricing.html">web designer in Banbury</a>? Get a free quote today.</p>
-      </div>
-    </div>
-    <hr>
-  </section>
-  <div class="album py-5 bg-body-tertiary">
+        <section class="portfolio-hero">
+            <div class="portfolio-hero-content">
+                <h1>Demo Sites and Portfolio</h1>
+                <p>Here are a few examples of websites built by us here at Head-Start. Each site is designed to be clear, mobile-friendly and tailored to your goals...</p>
+            </div>
+        </section>
+  <section class="pf-cards-section">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <!-- Trader Watchdog -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="https://www.traderwatchdog.co.uk" target="_blank" rel="noopener">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/traderwatchdog_logo.webp" width="400" height="225" alt="Trader Watchdog" class="card-img-top" style="height:225px; object-fit:contain; background-color:#fff; padding:1rem;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">A consumer protection platform built to help the public find verified traders 
+              and give trustworthy businesses a way to showcase their credentials online.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent); margin-bottom:0.4rem;">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Trader registration and verification journey</li>
+                <li style="margin-bottom:0.3rem;">Identity checks using Sumsub integration</li>
+                <li style="margin-bottom:0.3rem;">Payment flow for admin fees, subscriptions and sticker orders</li>
+                <li style="margin-bottom:0.3rem;">Secure enquiry and application forms</li>
+                <li style="margin-bottom:0.3rem;">Admin dashboard for managing traders and enquiries</li>
+                <li style="margin-bottom:0.3rem;">Responsive design for mobile, tablet and desktop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horley Cricket Club -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="https://www.horleycricketclub.co.uk/" target="_blank" rel="noopener">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/horleyoxon.png" width="400" height="225" alt="Horley Cricket Club" class="card-img-top" style="height:225px; object-fit:contain; background-color:#fff; padding:1rem;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">A clean, professional club website keeping members and supporters up to date all season.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent); margin-bottom:0.4rem;">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Fixture list and match results</li>
+                <li style="margin-bottom:0.3rem;">Player and team profiles</li>
+                <li style="margin-bottom:0.3rem;">Club news and photo gallery</li>
+                <li style="margin-bottom:0.3rem;">Contact information with map</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Moments -->
+        <div class="col">
+          <div class="card shadow-sm">
+            
+            <a href="https://www.special-moments.co.uk" target="_blank" rel="noopener">
+              <img  src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/Portfolio - Special Moments.png" width="400" height="225" alt="Special Moments Resin Art" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">An online store built to showcase handmade products and enhance customer journey.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent); margin-bottom:0.4rem;">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Custom product pages with high-quality images</li>
+                <li style="margin-bottom:0.3rem;">Secure payment gateway integration</li>
+                <li style="margin-bottom:0.3rem;">Responsive design for mobile and desktop</li>
+                <li style="margin-bottom:0.3rem;">User-friendly shopping cart and checkout process</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- T Morris -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="https://www.tmorrispainting.co.uk/" target="_blank" rel="noopener">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/Portfolio - Morris.png" width="400" height="225" alt="T Morris Painting &amp; Decorating" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">A clean, professional website built for a sole trader to showcase services and attract local customers.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent);">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Services and pricing guide</li>
+                <li style="margin-bottom:0.3rem;">Before and after project gallery</li>
+                <li style="margin-bottom:0.3rem;">Online quote request form</li>
+                <li style="margin-bottom:0.3rem;">Customer testimonials</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <!-- Serenity Beauty Salon Demo -->
         <div class="col">
           <div class="card shadow-sm">
-            <div class="demo-badge">Demo Site</div>
-            <picture>
-              <source type="image/jpg" srcset="images/salon.jpg">
-              <img src="images/salon.jpg" width="400" height="225" alt="Serenity Beauty Salon Banbury - Modern responsive website for beauty and wellness services" class="card-img-top" style="height:225px; object-fit:cover; background: linear-gradient(135deg, #d4a574 0%, #f8f2ed 100%);" loading="lazy">
-            </picture>
-            <div class="card-body text-center">
-              <h3 class="card-title">Serenity Beauty Salon</h3>
-              <p class="card-text">Elegant beauty salon website featuring online booking system, service showcases, and admin dashboard for managing appointments.</p>
-              <div class="text-start mb-3">
-                <p class="fw-bold mb-2 small text-muted">Key Features:</p>
-                <ul class="small text-muted">
-                  <li>Online booking system</li>
-                  <li>Service menu & pricing</li>
-                  <li>Admin dashboard for appointments</li>
-                  <li>Mobile-responsive design</li>
-                  <li>SEO optimized for local search</li>
-                </ul>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="btn-group">
-                  <a href="https://ryanthehope.github.io/Serenity-Beauty-Salon/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-pill">View</a>
-                </div>
-              </div>
+            <div class="demo-badge">Demo</div>
+            <a href="https://ryanthehope.github.io/Serenity-Beauty-Salon/" target="_blank" rel="noopener">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/Portfolio - Serenity.png" width="400" height="225" alt="Serenity Beauty Salon Banbury" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">Elegant beauty salon website featuring online booking and a full service showcase.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent); margin-bottom:0.4rem;">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Online appointment booking system</li>
+                <li style="margin-bottom:0.3rem;">Full treatment menu with pricing</li>
+                <li style="margin-bottom:0.3rem;">Meet the team profiles</li>
+                <li style="margin-bottom:0.3rem;">Admin dashboard for managing bookings</li>
+              </ul>
             </div>
           </div>
         </div>
-        
+
         <!-- ProTrade Services Demo -->
         <div class="col">
           <div class="card shadow-sm">
-            <div class="demo-badge">Demo Site</div>
-            <picture>
-              <source type="image/jpg" srcset="images/tradesman.jpg">
-              <img src="images/tradesman.jpg" width="400" height="225" alt="ProTrade Services Oxfordshire - Professional tradesman website with quote calculator and gallery" class="card-img-top" style="height:225px; object-fit:cover; background: linear-gradient(135deg, #1e3a5f 0%, #ff6b35 100%);" loading="lazy">
-            </picture>
-            <div class="card-body text-center">
-              <h3 class="card-title">ProTrade Services</h3>
-              <p class="card-text">Professional tradesman website for plumbers, electricians, and builders with service showcase, gallery, and lead generation forms.</p>
-              <div class="text-start mb-3">
-                <p class="fw-bold mb-2 small text-muted">Key Features:</p>
-                <ul class="small text-muted">
-                  <li>Lead generation contact forms</li>
-                  <li>Before/after project gallery</li>
-                  <li>Multiple service pages</li>
-                  <li>Mobile-friendly for on-the-go customers</li>
-                  <li>SEO optimized for local search</li>
-                </ul>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="btn-group">
-                  <a href="https://ryanthehope.github.io/Pro-Trade-Services/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-pill">View</a>
-                </div>
-              </div>
+            <div class="demo-badge">Demo</div>
+            <a href="https://ryanthehope.github.io/Pro-Trade-Services/" target="_blank" rel="noopener">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/Portfolio - ProTrade.png" width="400" height="225" alt="ProTrade Services Oxfordshire" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">Professional tradesman website designed to win local leads and showcase completed work.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent); margin-bottom:0.4rem;">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Multi-trade service pages</li>
+                <li style="margin-bottom:0.3rem;">Project portfolio gallery</li>
+                <li style="margin-bottom:0.3rem;">Online quote request form</li>
+                <li style="margin-bottom:0.3rem;">Customer reviews and ratings</li>
+              </ul>
             </div>
           </div>
         </div>
-        
+
         <!-- Pawfect Walks Demo -->
         <div class="col">
           <div class="card shadow-sm">
-            <div class="demo-badge">Demo Site</div>
-            <picture>
-              <source type="image/jpg" srcset="images/dog walker.jpg">
-              <img src="images/dog walker.jpg" width="400" height="225" alt="Pawfect Walks Banbury - Dog walking service website with booking system and customer reviews" class="card-img-top" style="height:225px; object-fit:cover; background: linear-gradient(135deg, #10b981 0%, #f97316 100%);" loading="lazy">
-            </picture>
-            <div class="card-body text-center">
-              <h3 class="card-title">Pawfect Walks</h3>
-              <p class="card-text">Friendly dog walking and pet care service website with pricing tiers, testimonials, and meet & greet booking form.</p>
-              <div class="text-start mb-3">
-                <p class="fw-bold mb-2 small text-muted">Key Features:</p>
-                <ul class="small text-muted">
-                  <li>Clear pricing tiers & packages</li>
-                  <li>Client testimonials section</li>
-                  <li>Meet & greet booking form</li>
-                  <li>Service area coverage map</li>
-                  <li>SEO optimized for local search</li>
-                </ul>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="btn-group">
-                  <a href="https://ryanthehope.github.io/Pawfect-Walks/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-pill">View</a>
-                </div>
-              </div>
+            <div class="demo-badge">Demo</div>
+            <a href="https://ryanthehope.github.io/Pawfect-Walks/" target="_blank" rel="noopener">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/Portfolio - Pawfect.png" width="400" height="225" alt="Pawfect Walks Banbury" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
+            </a>
+            <div class="card-body">
+              <p class="card-text text-center">Friendly dog walking and pet care website designed to build trust and convert local pet owners.</p>
+              <p class="card-text" style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--color-brand-accent); margin-bottom:0.4rem;">Key features:</p>
+              <ul class="card-text" style="padding-left:1.2rem; margin-bottom:0;">
+                <li style="margin-bottom:0.3rem;">Flexible pricing and service packages</li>
+                <li style="margin-bottom:0.3rem;">Walker profiles with DBS check badges</li>
+                <li style="margin-bottom:0.3rem;">Online booking and enquiry form</li>
+                <li style="margin-bottom:0.3rem;">Customer testimonials and photos</li>
+              </ul>
             </div>
           </div>
         </div>
-        
-        <div class="col">
-          <div class="card shadow-sm">
-            <picture>
-              <source type="image/webp" srcset="images/special-moments.webp">
-              <img src="images/special-moments.webp" width="400" height="225" alt="Special Moments Resin Art - E-commerce website for handcrafted resin keepsakes in Banbury" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
-            </picture>
-            <div class="card-body text-center">
-              <h3 class="card-title">Special Moments</h3>
-              <p class="card-text">A simple online store built to showcase handmade products and allow customers to pay easily through PayPal.</p>
-              <div class="text-start mb-3">
-                <p class="fw-bold mb-2 small text-muted">Key Features:</p>
-                <ul class="small text-muted">
-                  <li>PayPal payment integration</li>
-                  <li>Product catalog with images</li>
-                  <li>Mobile shopping experience</li>
-                  <li>Secure checkout process</li>
-                  <li>SEO optimized product pages</li>
-                </ul>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="btn-group">
-                  <a href="https://www.special-moments.co.uk" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-pill">View</a>
-                </div>
-              </div>
+
+        <!-- CTA  -->
+         <div class="col">
+          <div class="card shadow-sm text-center cta-card">
+            <div class="card-body2">
+              <img src="images/Head-Start PORTFOLIO/Head-Start PORTFOLIO/Portfolio - Orange Rocket Icon.png" alt="" class="cta-logo" aria-hidden="true">
+              <h3 class="card-title">Ready to get your business online?</h3>
+              <p class="card-text" style="color:#fff;">Whether you need a simple website or something more advanced, I can build a custom site that helps your business look professional online.</p>
+              <ul class="hero-features">
+                <li>&#10003; Custom-built websites</li>
+                <li>&#10003; Mobile-friendly design</li>
+                <li>&#10003; 30-day money-back guarantee</li>
+              </ul>
+              <a href="contact.html" class="hero-btn">Start your website</a>
             </div>
           </div>
-        </div>
-        
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/timmorris.webp" width="400" height="225" alt="T Morris Painting & Decorating - Professional website for Banbury painter decorator" class="card-img-top" style="height:225px; object-fit:cover;" loading="lazy">
-            <div class="card-body text-center">
-              <h3 class="card-title">T Morris Painting & Decorating</h3>
-              <p class="card-text">A clean, professional website built for a sole trader to showcase services and make it easier for customers to get in touch.</p>
-              <div class="text-start mb-3">
-                <p class="fw-bold mb-2 small text-muted">Key Features:</p>
-                <ul class="small text-muted">
-                  <li>Mobile-responsive design</li>
-                  <li>Service showcase pages</li>
-                  <li>Contact form integration</li>
-                  <li>Local SEO optimized for Banbury area</li>
-                </ul>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="btn-group">
-                  <a href="https://www.tmorrispainting.co.uk/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-pill">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>
-  </div>
-  
-  <!-- CTA Section -->
-  <div class="container py-5 my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <div class="p-5 bg-blue-subtle rounded-3">
-          <h2 class="display-5 fw-bold text-dark mb-4">Ready to Get Your Business Online?</h2>
-          <p class="lead mb-4">Whether you need a simple website or something more advanced, I can build it for you.</p>
-          <p class="mb-4">Every website is custom-built, mobile-responsive, and optimized for Google. Plus, you get a 30-day money-back guarantee if you're not completely satisfied.</p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <a href="contact.html" class="btn btn-primary btn-lg px-4 gap-3">Get Your Free Quote</a>
-            <a href="pricing.html" class="btn btn-outline-secondary btn-lg px-4">View Pricing</a>
-          </div>
+        </div><!-- close col -->
+      </div><!-- close row -->
+      <!-- Bottom CTA -->
+      <div class="pf-bottom-cta text-center">
+        <img src="images/Head-Start HOME/Head-Start HOME/Home - Head-Start Logo - White.png" alt="Head-Start Web Development" class="pf-bottom-logo">
+        <div>
+          <a href="contact.html" class="cta-img-btn">Contact us for a Free Quote</a>
         </div>
       </div>
-    </div>
-  </div>
+    </div><!-- close container -->
+  </section>
 </main>
         <script src="myscripts.js" defer></script>
         <div class="container-fluid">
@@ -347,20 +358,19 @@
                     <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">Contact</a>
                     </li> 
                 </ul>
+                <div class="text-center mt-2">
+                  <img src="images/Head-Start HOME/Head-Start HOME/Home - Head-Start Logo - White.png" alt="Head-Start Web Development" height="180">
+                </div>
                 </nav>
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
                     <li class="instagram">
-                        <a class="text-body-secondary" href="https://www.instagram.com/headstart_webdevelopment" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                        </svg>
+                        <a href="https://www.instagram.com/headstart_webdevelopment" aria-label="Instagram">
+                          <img src="images/Head-Start HOME/Head-Start HOME/Home - Insta .png" alt="Instagram" width="36" height="36">
                         </a>
                     </li> 
                     <li class="facebook">
-                        <a class="text-body-secondary" href="https://www.facebook.com/profile.php?id=61577117251691" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                        </svg>
+                        <a href="https://www.facebook.com/profile.php?id=61577117251691" aria-label="Facebook">
+                          <img src="images/Head-Start HOME/Head-Start HOME/Home - facebook.png" alt="Facebook" width="36" height="36">
                         </a>
                 </li> 
                 </ul>

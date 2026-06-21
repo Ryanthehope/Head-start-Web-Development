@@ -100,7 +100,6 @@ function setupFormValidation() {
     form.addEventListener('submit', function(e) {
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
 
         let isValid = true;
 
@@ -123,21 +122,13 @@ function setupFormValidation() {
             }
         }
 
-        // Message validation
-        if (messageInput && messageInput.value.trim().length < 10) {
-            showError(messageInput, 'Message must be at least 10 characters');
-            isValid = false;
-        } else if (messageInput) {
-            clearError(messageInput);
-        }
-
         if (!isValid) {
             e.preventDefault();
         }
     });
 
     // Real-time validation feedback
-    document.querySelectorAll('.fs-input, .fs-textarea').forEach(input => {
+    document.querySelectorAll('.fs-input').forEach(input => {
         input.addEventListener('blur', function() {
             if (this.id === 'email') {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -202,7 +193,7 @@ function enableSmoothScroll() {
 // ===== GOOGLE ANALYTICS CLICK TRACKING =====
 document.addEventListener('DOMContentLoaded', function () {
     // Track clicks on main CTA buttons
-    var ctaButtons = document.querySelectorAll('.btn-primary, .cta-button, .btn-success');
+    var ctaButtons = document.querySelectorAll('.fs-button, .btn-pricing, .cta-button-secondary');
     ctaButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
             if (window.gtag) {
