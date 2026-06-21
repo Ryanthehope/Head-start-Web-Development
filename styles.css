@@ -312,9 +312,11 @@ footer,
   overflow-x: hidden;
 }
 
-/* Footer logo — prevent overflow on narrow screens */
+/* Footer logo — constrain size, prevent overflow on narrow screens */
 footer .text-center img {
   max-width: 100%;
+  max-height: 180px;
+  width: auto;
   height: auto;
 }
 
@@ -793,11 +795,12 @@ textarea {
 
 /* Full-page background image */
 .contact-main-bg {
+  display: flow-root;
+  background-color: #04306a;
   background-image: url('images/Head-Start CONTACT/Head-Start CONTACT/Contact - Blast Off.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center -35rem;
-  overflow: hidden;
 }
 
 /* Contact Bottom CTA */
@@ -1169,9 +1172,9 @@ a.contact-link:hover {
   color: var(--color-brand-navy);
   font-weight: 800;
   font-size: 1.5rem;
-  padding: 0 15% 0 6%;
+  padding: 0 15% 72px 6%;
   min-width: 320px;
-  height: 170px;
+  height: 200px;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -1188,8 +1191,8 @@ a.contact-link:hover {
   position: absolute;
   inset: 0;
   background-image: url('images/Head-Start HOME/Head-Start HOME/Home - CT Button.png');
-  background-size: 100% 295%;
-  background-position: center 45%;
+  background-size: 100% 200%;
+  background-position: center 59%;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -1202,13 +1205,23 @@ a.contact-link:hover {
 }
 
 @media (max-width: 768px) {
+  .stats-bar-wrapper {
+    display: block;
+    width: 100%;
+  }
   .stats-bar {
     flex-wrap: wrap;
     border-radius: 20px;
-    gap: 0.5rem;
+    gap: 0;
+    padding: 1rem;
+    justify-content: center;
   }
   .stat-divider { display: none; }
-  .stat-item { padding: 0.5rem 1rem; }
+  .stat-item {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 0.6rem 0.5rem;
+  }
   .journey-card { border-radius: 20px; }
 }
 
@@ -1906,6 +1919,24 @@ a.contact-link:hover {
     padding: 1.25rem 1.5rem;
     justify-content: center;
     text-align: center;
+  }
+
+  /* Replace the image pill with a plain white pill on mobile */
+  .cta-img-btn::before {
+    background-image: none;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Remove the translateY jump on tap */
+  .cta-img-btn:hover {
+    transform: none;
+  }
+
+  /* Push button above the orange wave in promise section */
+  .promise-section {
+    padding-bottom: 5rem;
   }
 
   /* --- Contact icons: shrink on small screens --- */
