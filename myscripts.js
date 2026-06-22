@@ -292,8 +292,7 @@ function rejectCookies() {
  * Prefer GTM when a container ID is configured, otherwise fall back to direct GA4.
  */
 function loadTracking() {
-    // Google Analytics is now loaded directly in the HTML <head> for reliability.
-    // No need to load GA dynamically here.
+    loadGoogleAnalytics('G-HND1DBBSSD');
 }
 
 function loadGoogleAnalytics(measurementId) {
