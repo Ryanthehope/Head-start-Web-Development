@@ -1223,6 +1223,10 @@ a.contact-link:hover {
     padding: 0.6rem 0.5rem;
   }
   .journey-card { border-radius: 20px; }
+  /* Promise quote brand name: orange vanishes on orange bg at small sizes */
+  .promise-brand {
+    color: white;
+  }
 }
 
 /* Hero Section — full-bleed wrapper covering nav + content */
