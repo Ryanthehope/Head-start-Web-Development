@@ -1244,10 +1244,6 @@ a.contact-link:hover {
   z-index: 1;
 }
 
-.promise-brand {
-  color: var(--color-brand-accent);
-}
-
 .cta-img-btn {
   position: relative;
   display: inline-flex;
