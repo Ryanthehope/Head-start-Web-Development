@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const TRACKING_CONFIG = {
-    ga4MeasurementIds: ['G-HND1DBBSSD'],
+    ga4MeasurementId: 'G-HND1DBBSSD',
     gtmContainerId: ''
 };
 
@@ -292,7 +292,7 @@ function rejectCookies() {
  * Prefer GTM when a container ID is configured, otherwise fall back to direct GA4.
  */
 function loadTracking() {
-    loadGoogleAnalytics('G-HND1DBBSSD');
+    loadGoogleAnalytics(TRACKING_CONFIG.ga4MeasurementId);
 }
 
 function loadGoogleAnalytics(measurementId) {
