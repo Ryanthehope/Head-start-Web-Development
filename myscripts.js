@@ -97,6 +97,12 @@ function setupFormValidation() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
+    form.addEventListener('focusin', function() {
+        trackAnalyticsEvent('form_start', {
+            form_name: 'contact_form'
+        });
+    }, { once: true });
+
     form.addEventListener('submit', function(e) {
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
@@ -124,6 +130,11 @@ function setupFormValidation() {
 
         if (!isValid) {
             e.preventDefault();
+        } else {
+            trackAnalyticsEvent('generate_lead', {
+                form_name: 'contact_form',
+                form_destination: 'formspree'
+            });
         }
     });
 
@@ -190,18 +201,22 @@ function enableSmoothScroll() {
 
 // ===== COOKIE CONSENT & GDPR COMPLIANCE =====
 
-// ===== GOOGLE ANALYTICS CLICK TRACKING =====
+// ===== GOOGLE ANALYTICS EVENT TRACKING =====
+function trackAnalyticsEvent(eventName, eventParams) {
+    if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, eventParams || {});
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Track clicks on main CTA buttons
-    var ctaButtons = document.querySelectorAll('.fs-button, .btn-pricing, .cta-button-secondary');
+    var ctaButtons = document.querySelectorAll('.fs-button, .btn-pricing, .cta-button-secondary, .cta-img-btn');
     ctaButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            if (window.gtag) {
-                gtag('event', 'click', {
-                    'event_category': 'CTA',
-                    'event_label': btn.textContent.trim()
-                });
-            }
+            trackAnalyticsEvent('cta_click', {
+                cta_text: btn.textContent.trim(),
+                cta_class: btn.className
+            });
         });
     });
 
@@ -209,23 +224,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     emailLinks.forEach(function(link) {
         link.addEventListener('click', function() {
-            if (window.gtag) {
-                gtag('event', 'click', {
-                    'event_category': 'Email',
-                    'event_label': link.getAttribute('href')
-                });
-            }
+            trackAnalyticsEvent('email_click', {
+                link: link.getAttribute('href')
+            });
         });
     });
     var telLinks = document.querySelectorAll('a[href^="tel:"]');
     telLinks.forEach(function(link) {
         link.addEventListener('click', function() {
-            if (window.gtag) {
-                gtag('event', 'click', {
-                    'event_category': 'Phone',
-                    'event_label': link.getAttribute('href')
-                });
-            }
+            trackAnalyticsEvent('phone_click', {
+                link: link.getAttribute('href')
+            });
         });
     });
 });
