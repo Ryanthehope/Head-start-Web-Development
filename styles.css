@@ -347,6 +347,31 @@ footer .text-center img {
   background-position: center center;
 }
 
+.portfolio-site-name-panel {
+  min-height: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: #2A528A;
+  text-align: center;
+}
+
+.portfolio-site-name-panel a {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.portfolio-site-name-panel a:hover,
+.portfolio-site-name-panel a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .cta-logo {
   position: absolute;
   top: 3rem;
