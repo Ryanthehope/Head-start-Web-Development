@@ -1338,7 +1338,7 @@ a.contact-link:hover {
 /* Hero Section — full-bleed wrapper covering nav + content */
 .hero-wrapper {
   background-color: var(--color-brand-navy);
-  background-image: url('images/Head-Start HOME/Head-Start HOME/Home - Shuttle.png');
+  background-image: url('images/Head-Start HOME/Head-Start HOME/Home - Shuttle.webp');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -1355,7 +1355,7 @@ a.contact-link:hover {
   position: relative;
   padding: 4rem 2rem !important;
   background-color: var(--color-brand-navy);
-  background-image: url('images/Head-Start HOME/Head-Start HOME/Home - Shuttle.png');
+  background-image: url('images/Head-Start HOME/Head-Start HOME/Home - Shuttle.webp');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
