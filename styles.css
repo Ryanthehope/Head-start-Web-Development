@@ -590,8 +590,7 @@ footer .text-center img {
 .logo-gradient {
   position: relative;
   display: inline-block;
-  filter: drop-shadow(0 0 20px rgba(10, 22, 40, 0.5)) drop-shadow(0 0 35px rgba(30, 58, 95, 0.4));
-  animation: logo-glow 25s ease infinite;
+  /* Removed glow effect for performance */
 }
 
 .logo-gradient img {
