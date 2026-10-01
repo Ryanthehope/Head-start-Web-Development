@@ -598,18 +598,6 @@ footer .text-center img {
   height: auto;
 }
 
-@keyframes logo-glow {
-  0% {
-    filter: drop-shadow(0 0 20px rgba(10, 22, 40, 0.5)) drop-shadow(0 0 35px rgba(30, 58, 95, 0.4));
-  }
-  50% {
-    filter: drop-shadow(0 0 30px rgba(30, 58, 95, 0.6)) drop-shadow(0 0 45px rgba(44, 95, 141, 0.5));
-  }
-  100% {
-    filter: drop-shadow(0 0 20px rgba(10, 22, 40, 0.5)) drop-shadow(0 0 35px rgba(30, 58, 95, 0.4));
-  }
-}
-
 /* Page Title Section */
 .page-title-section {
   background: linear-gradient(135deg, rgba(30, 58, 95, 0.06), rgba(251, 119, 60, 0.04));
